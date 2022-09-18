@@ -1,0 +1,63 @@
+.product-slider {
+  position: relative;
+  padding: rem(142) 0;
+  background-image: url("@img/product_background.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  &__wrapper {
+    align-items: center;
+  }
+  &__slide {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+  }
+  &__img {
+    width: 351px;
+    height: 200px;
+    transition: all 0.5s ease 0s;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.slider__navigation {
+  margin-top: rem(24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: rem(24);
+  .slide_left {
+    cursor: pointer;
+  }
+  .slide_right {
+    cursor: pointer;
+  } 
+  .slide_points {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: rem(8);
+    .swiper-pagination-bullet {
+      cursor: pointer;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $themeColor;
+      opacity: 0.2;
+      transition: all 0.5s ease 0s;
+    }
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+  }
+}
+
+.zoom-container {
+  height: 412px;
+  @include adaptiveValue("width", 640, 310);
+}

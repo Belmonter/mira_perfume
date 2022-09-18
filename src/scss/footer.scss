@@ -1,0 +1,116 @@
+.footer {
+  padding-top: rem(60);
+  @media (max-width: 768px){
+    padding-top: rem(80);
+  }
+  &__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    column-gap: rem(50);
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      row-gap: rem(40);
+      align-items: center;
+    }
+  }
+  &__sakura {
+    position: absolute;
+    bottom: -69px;
+    right: -200px;
+    z-index: -1;
+    @media (max-width: 1472px){
+      display: none;
+    }
+  }
+  &__map {
+    width: rem(640);
+    height: rem(400);
+    @media (max-width: 768px){
+      width: rem(375);
+      height: rem(234);
+    }
+  }
+  &__policy {
+    margin-top: rem(40);
+    padding: rem(7) 0;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: math.div(22, 16);
+  }
+  .info-footer {
+    &__title {
+      font-weight: 600;
+      @include adaptiveValue("font-size", 18, 16);
+      line-height: math.div(24, 18);
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+    }
+    &__city {
+      margin-top: rem(12);
+      line-height: math.div(22, 16);
+      @include adaptiveValue("font-size", 16, 14);
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+    }
+    &__address {
+      margin-top: rem(12);
+      line-height: math.div(22, 16);
+      @include adaptiveValue("font-size", 16, 14);
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+    }
+    &__contacts {
+      margin-top: rem(24);
+    }
+    &__social {
+      margin-top: rem(24);
+      display: flex;
+      align-items: center;
+      column-gap: rem(16);
+      @media (max-width: 768px) {
+        justify-content: center;
+      }
+    }
+    &__btn {
+      margin-top: rem(40);
+      @media (max-width: 768px) {
+        display: flex;
+        margin: rem(24) auto 0px auto;
+      }
+    }
+  }
+  .contacts-footer {
+    &__title {
+      font-weight: 600;
+      @include adaptiveValue("font-size", 18, 16);
+      line-height: math.div(24, 18);
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+    }
+    &__phone {
+      display: block;
+      margin-top: rem(12);
+      line-height: math.div(22, 16);
+      @include adaptiveValue("font-size", 16, 14);
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+    }
+    &__email {
+      display: block;
+      margin-top: rem(12);
+      line-height: math.div(22, 16);
+      @include adaptiveValue("font-size", 16, 14);
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+.reviews {
+  position: relative;
+  background: linear-gradient(99.3deg, #6960e1 -1.83%, #cc72c8 102.82%);
+  padding: rem(60) 0;
+  @media (max-width: 590px) {
+    background: #fff;
+    padding: 0px 0px;
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 590px) {
+      justify-content: center;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 24, 22);
+    line-height: math.div(34, 24);
+    text-transform: uppercase;
+    color: $whiteColor;
+    @media (max-width: 590px) {
+      color: $mainColor;
+    }
+  }
+  &__slide-navigation {
+    display: flex;
+    align-items: center;
+    column-gap: rem(24);
+  }
+  &__slide {
+    display: flex;
+    justify-content: center;
+  }
+  &__iphone {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__review {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .reviews-slider-wrapper {
+    position: relative;
+    width: 196px;
+    height: 400px;
+  }
+  .review-slider-container {
+    margin: 40px auto 0px auto;
+  }
+  .reviews__slide-left,
+  .reviews__slide-right {
+    cursor: pointer;
+    @media (max-width: 590px) {
+      justify-content: center;
+    }
+  }
+  .reviews__slide-points {
+    display: flex;
+    align-items: center;
+    column-gap: rem(8);
+    .swiper-pagination-bullet {
+      cursor: pointer;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $blueColor;
+      opacity: 0.2;
+      transition: all 0.5s ease 0s;
+    }
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+  }
+}
+
+.reviews-zoom-container {
+  width: 293px;
+  height: 574px;
+}
+
+.reviews__slide-navigation {
+  @media (max-width: 590px) {
+    margin: rem(24) auto 0px auto;
+    justify-content: center;
+  }
+}

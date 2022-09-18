@@ -1,0 +1,39 @@
+.certificate {
+  @include adaptiveValue("padding-top", 120, 80);
+  @include adaptiveValue("padding-bottom", 120, 80);
+  &__desc {
+    max-width: rem(860);
+    margin: rem(24) auto 0px auto;
+    text-align: center;
+    line-height: math.div(22, 16);
+  }
+  &__wrapper {
+    position: relative;
+    margin-top: rem(24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include adaptiveValue("column-gap", 45, 30, 1920, 1300, 1);
+    @media (max-width: 1280px){
+      flex-wrap: wrap;
+      row-gap: 24px;
+    }
+  }
+  &__item {
+    @include adaptiveValue("width", 284, 128);
+    @include adaptiveValue("height", 400, 180);
+    filter: drop-shadow(0px 4px 14px rgba(0, 0, 0, 0.14));
+  }
+  .certificate-zoom-container {
+    width: 407px;
+    @include adaptiveValue("width", 407, 128);
+    @include adaptiveValue("height", 564, 180);
+    height: 564px;
+  }
+  .certificate__sakura {
+    position: absolute;
+    bottom: 64px;
+    right: -94px;
+    transform: translate(0, 100%);
+  }
+}

@@ -1,0 +1,36 @@
+.why {
+  &__wrapper {
+    margin-top: rem(40);
+  }
+  &__wrapper {
+    display: grid;
+    justify-content: center;
+    column-gap: rem(58);
+    @include adaptiveValue("row-gap", 60, 24);
+    grid-template-columns: repeat(auto-fill, minmax(rem(150), rem(492)));
+  }
+  &__item {
+    display: flex;
+    column-gap: rem(12);
+  }
+  .item-why {
+    &__logo {
+      width: rem(60);
+      height: rem(60);
+      img {
+        object-fit: contain;
+      }
+    }
+    &__title {
+      font-weight: 600;
+      @include adaptiveValue("font-size", 18, 16);
+      line-height: math.div(24, 18);
+    }
+    &__desc {
+      max-width: rem(420);
+      margin-top: rem(12);
+      line-height: math.div(22, 16);
+      @include adaptiveValue("font-size", 16, 14);
+    }
+  }
+}
