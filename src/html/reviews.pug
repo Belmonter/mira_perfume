@@ -5,34 +5,38 @@
       .reviews__title Отзывы наших клиентов
       .reviews__slide-navigation(data-da=".reviews__container, 590, last") 
         .reviews__slide-left
-          img(src="@img/icons/slide_left.svg", alt="arrow left")
+          picture 
+            source(media="(max-width: 590px)", srcset="@img/icons/slide_left_black.svg")
+            img(src="@img/icons/slide_left.svg", alt="arrow left")
         .reviews__slide-points 
         .reviews__slide-right
-          img(src="@img/icons/slide_right.svg", alt="arrow right")
+          picture 
+            source(media="(max-width: 590px)", srcset="@img/icons/slide_right_black.svg")
+            img(src="@img/icons/slide_right.svg", alt="arrow right")
     .review-slider-container 
       .reviews__slider.swiper
         .reviews__wrapper.swiper-wrapper
           .reviews__slide.swiper-slide
             .reviews-slider-wrapper 
-              img.reviews__iphone(src="@img/review_slide_1.png" alt="phone" reviews-zoom)
+              img.reviews__iphone(data-src="@img/review_slide_1.png" alt="phone" reviews-zoom)
           .reviews__slide.swiper-slide
             .reviews-slider-wrapper 
-              img.reviews__iphone(src="@img/review_slide_2.png" alt="phone" reviews-zoom)
+              img.reviews__iphone(data-src="@img/review_slide_2.png" alt="phone" reviews-zoom)
           .reviews__slide.swiper-slide
             .reviews-slider-wrapper 
-              img.reviews__iphone(src="@img/review_slide_3.png" alt="phone" reviews-zoom)
+              img.reviews__iphone(data-src="@img/review_slide_3.png" alt="phone" reviews-zoom)
           .reviews__slide.swiper-slide
             .reviews-slider-wrapper 
-              img.reviews__iphone(src="@img/review_slide_4.png" alt="phone" reviews-zoom)
+              img.reviews__iphone(data-src="@img/review_slide_4.png" alt="phone" reviews-zoom)
           .reviews__slide.swiper-slide
             .reviews-slider-wrapper 
-              img.reviews__iphone(src="@img/review_slide_1.png" alt="phone" reviews-zoom)
+              img.reviews__iphone(data-src="@img/review_slide_1.png" alt="phone" reviews-zoom)
           .reviews__slide.swiper-slide
             .reviews-slider-wrapper 
-              img.reviews__iphone(src="@img/review_slide_2.png" alt="phone" reviews-zoom)
+              img.reviews__iphone(data-src="@img/review_slide_2.png" alt="phone" reviews-zoom)
           .reviews__slide.swiper-slide
             .reviews-slider-wrapper 
-              img.reviews__iphone(src="@img/review_slide_3.png" alt="phone" reviews-zoom)
+              img.reviews__iphone(data-src="@img/review_slide_3.png" alt="phone" reviews-zoom)
           .reviews__slide.swiper-slide
             .reviews-slider-wrapper 
-              img.reviews__iphone(src="@img/review_slide_4.png" alt="phone" reviews-zoom)
+              img.reviews__iphone(data-src="@img/review_slide_4.png" alt="phone" reviews-zoom)

@@ -46,6 +46,7 @@
 		"gulp-webpcss": "latest",
 		"gulp-zip": "latest",
 		"html-webpack-plugin": "latest",
+		"html-webpack-pug-plugin": "^4.0.0",
 		"inputmask": "latest",
 		"js-datepicker": "latest",
 		"lightgallery": "latest",

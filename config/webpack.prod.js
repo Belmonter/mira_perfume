@@ -91,7 +91,10 @@ const config = {
 				test: /\.pug$/,
 				use: [
 					{
-						loader: 'pug-loader'
+						loader: 'pug-loader',
+            options: {
+              pretty: true,
+            }
 					}, {
 						loader: 'string-replace-loader',
 						options: {

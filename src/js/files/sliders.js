@@ -37,7 +37,7 @@ function initSliders() {
 			//simulateTouch: false,
 			// loop: true,
 			//preloadImages: false,
-			//lazy: true,
+			lazy: true,
 
 			/*
 			// Эффекты
@@ -108,7 +108,7 @@ function initSliders() {
 			//simulateTouch: false,
 			// loop: true,
 			//preloadImages: false,
-			//lazy: true,
+			lazy: true,
 
 			/*
 			// Эффекты

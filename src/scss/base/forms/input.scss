@@ -26,3 +26,9 @@ textarea.input {
 	resize: none;
 	padding: rem(10);
 }
+
+.form__error {
+  margin-top: rem(5);
+  color: red;
+  font-size: rem(12);
+}

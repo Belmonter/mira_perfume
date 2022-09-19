@@ -1,19 +1,28 @@
 .promo {
   position: relative;
   height: 100vh;
+  width: 100vw;
   padding-bottom: rem(242);
+  background: linear-gradient(178.38deg, rgba(0, 0, 0, 0.8) -1.94%, rgba(0, 0, 0, 0) 98.62%),
+    linear-gradient(105.61deg, rgba(0, 0, 0, 0.8) -1.9%, rgba(0, 0, 0, 0) 102.87%);
+  overflow: hidden;
   @include adaptiveValue("padding-bottom", 242, 40);
   &__wrapper {
     margin-top: rem(106);
     @include adaptiveValue("margin-left", 110, 0, 1024, 700, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__content {
   }
   &__title {
     max-width: rem(535);
     font-weight: 700;
     @include adaptiveValue("font-size", 64, 38);
-    line-height: math.div(74 , 64);
+    line-height: math.div(74, 64);
     color: $whiteColor;
-    @media (max-width: 700px){
+    @media (max-width: 700px) {
       max-width: unset;
       text-align: center;
     }
@@ -22,15 +31,15 @@
     max-width: rem(600);
     margin-top: rem(24);
     @include adaptiveValue("font-size", 24, 16);
-    line-height: math.div(34 , 24);
+    line-height: math.div(34, 24);
     color: $whiteColor;
-    @media (max-width: 700px){
+    @media (max-width: 700px) {
       text-align: center;
     }
   }
   &__btn {
     margin-top: rem(24);
-    @media (max-width: 700px){
+    @media (max-width: 700px) {
       display: flex;
       margin: rem(24) auto 0px auto;
     }

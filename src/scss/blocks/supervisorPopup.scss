@@ -1,39 +1,60 @@
 .supervisor {
   &__content {
-    width: rem(1080);
-    padding: rem(80) rem(60);
+    @include adaptiveValue("width", 1080, 330);
+    @include adaptiveValue("padding-top", 80, 46);
+    @include adaptiveValue("padding-bottom", 80, 17);
+    @include adaptiveValue("padding-left", 60, 12);
+    @include adaptiveValue("padding-right", 60, 12);
     background-image: url("@img/icons/popup_background.svg");
     background-position: left center;
     background-repeat: no-repeat;
+    @media (max-width: 768px) {
+      background-position: left top;
+      background-size: rem(210) rem(193);
+    }
   }
   &__title {
     font-weight: 700;
-    font-size: rem(64);
+    @include adaptiveValue("font-size", 64, 36);
     line-height: math.div(74, 64);
     text-transform: uppercase;
   }
   &__desc {
-    margin-top: rem(16);
-    font-size: rem(24);
+    @include adaptiveValue("margin-top", 16, 14);
+    @include adaptiveValue("font-size", 24, 16);
     line-height: math.div(34, 24);
   }
 }
 .form-supervisor {
   margin-top: rem(24);
+  &__input {
+    flex: 0 1 310px;
+    &._form-error {
+      input {
+        border: 1px solid red;
+      }
+    }
+    @media (max-width: 768px) {
+      flex: unset;
+      width: 100%;
+    }
+  }
   &__head {
     display: flex;
     align-items: center;
-    justify-content: center;
     column-gap: rem(16);
-    input {
-      width: rem(310);
+    @media (max-width: 768px) {
+      flex-direction: column;
+      row-gap: rem(24);
     }
   }
 }
 .footer-supervisor {
   margin-top: rem(16);
   &__txta {
+    display: flex;
     textarea {
+      flex: 0 1 962px;
       height: rem(86);
     }
   }
@@ -48,5 +69,17 @@
     background: #6960e1;
     box-shadow: 0px 4px 14px rgba(138, 61, 135, 0.4);
     color: $whiteColor;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  &__error {
+    text-align: center;
+    font-size: rem(12);
+    line-height: math.div(14, 12);
+    color: #e02323;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease 0s;
   }
 }

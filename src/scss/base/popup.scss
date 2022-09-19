@@ -47,6 +47,7 @@ body::after {
   align-items: center;
 }
 .popup__content {
+  box-sizing: content-box;
   visibility: hidden;
   transform: scale(0);
   transition: transform 0.3s ease 0s;

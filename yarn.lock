@@ -4107,6 +4107,11 @@ html-webpack-plugin@latest:
     pretty-error "^4.0.0"
     tapable "^2.0.0"
 
+html-webpack-pug-plugin@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/html-webpack-pug-plugin/-/html-webpack-pug-plugin-4.0.0.tgz#76f81dc149a5e9c97b79bda08067639a77e59ccc"
+  integrity sha512-0oB/E6vbBfr9Rqub7jAyqfT+zkIFDDXkga98Yd3uDkDExNhF5OxlEGZn2AfYyEgdky5OanialUvU6+Hj/EtaMQ==
+
 htmlparser2@^6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/htmlparser2/-/htmlparser2-6.1.0.tgz#c4d762b6c3371a05dbe65e94ae43a9f845fb8fb7"

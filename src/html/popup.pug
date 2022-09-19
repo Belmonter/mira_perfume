@@ -2,57 +2,63 @@
   .popup__wrapper.get-price__wrapper
     .popup__content.get-price__content
       button.popup__close(data-close type="button")
-        img(src="@img/icons/close.svg" alt="cross")
+        img(data-src="@img/icons/close.svg" alt="cross")
       .get-price__wrapper
         .get-price__info.info-get-price
           .info-get-price__title Получить прайс-лист
           .info-get-price__desc Подготовим коммерческое предложение и вышлем удобным способом
-        form.get-price__form.form-get-price
+        form.get-price__form.form-get-price(id="price_form")
           .form-get-price__input
-            input.input(autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="email")
+            input.input(autocomplete="off" id="price_email" data-required="email" data-validate type="text" name="price_email" placeholder="email")
           .form-get-price__input
-            input.input(autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Ваше Имя")
+            input.input._form-error(autocomplete="off" id="price_name" data-validate type="text" name="price_name" placeholder="Ваше Имя")
           .form-get-price__input
-            input.input(autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="+ 7 ( _ _ _ ) _ _ _  _ _ _ _")
+            input.input(autocomplete="off" id="price_tel" data-validate type="tel" data-tel-input maxlength="18" name="price_tel" placeholder="+ 7 ( _ _ _ ) _ _ _  _ _ _ _")
           .checkbox
-            input.checkbox__input(id="c_1" data-error="Ошибка" type="checkbox" value="1" name="form[]")
+            input.checkbox__input(id="c_1" type="checkbox" value="1" name="price_check")
             label.checkbox__label(for="c_1")
               span.checkbox__text Согласие с политикой обработки персональных данных
-          .form-get-price__btn.btn Получить прайс
+          button.form-get-price__btn.btn.disable_btn(type="submit") Получить прайс
+          .form-get-price__error
+            p Ошибка отправки,
+            p попробуйте повторить попытку
 
 .popup(id="popup_supervisor" aria-hidden="true")
   .popup__wrapper.supervisor__wrapper
     .popup__content.supervisor__content
       button.popup__close(data-close type="button")
-        img(src="@img/icons/close.svg" alt="cross")
+        img(data-src="@img/icons/close.svg" alt="cross")
       .supervisor__wrapper
         .supervisor__title Написать Руководителю
         .supervisor__desc Обратитесь к руководителю и он ответит на Ваши вопросы и предложения
-        form.supervisor__form.form-supervisor
+        form.supervisor__form.form-supervisor(id="superviser_form")
           .form-supervisor__head 
             .form-supervisor__input 
-              input.input(autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="e-mail")
+              input.input(autocomplete="off" id="supervisor_email" data-validate data-required="email" type="text" name="supervisor_email" placeholder="e-mail")
             .form-supervisor__input 
-              input.input(autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Ваше Имя")
+              input.input(autocomplete="off" id="supervisor_name" data-validate type="text" name="supervisor_name" placeholder="Ваше Имя")
             .form-supervisor__input 
-              input.input(autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="+ 7 ( _ _ _ ) _ _ _  _ _ _ ")
+              input.input(autocomplete="off" id="supervisor_tel" data-validate type="tel" data-tel-input maxlength="18" name="supervisor_tel" placeholder="+ 7 ( _ _ _ ) _ _ _  _ _ _ ")
           .form-supervisor__footer.footer-supervisor
             .footer-supervisor__txta
-              textarea.input(autocomplete="off" name="form[]" placeholder="Письмо" data-error="Ошибка")
+              textarea.input(autocomplete="off" id="supervisor_comment" name="supervisor_comment" placeholder="Письмо")
             .checkbox
-              input.checkbox__input(id="c_2" data-error="Ошибка" type="checkbox" value="1" name="form[]")
+              input.checkbox__input(id="c_2" type="checkbox" value="1" name="supervisor_price")
               label.checkbox__label(for="c_2")
                 span.checkbox__text Согласие с политикой обработки персональных данных
-            .footer-supervisor__btn Написать
+            button.footer-supervisor__btn.disable_btn(type="submit") Написать
+            .footer-supervisor__error 
+              p Ошибка отправки,
+              p попробуйте повторить попытку
 
 .popup(id="popup_thanks" aria-hidden="true")
   .popup__wrapper.thanks__wrapper
     .popup__content.thanks__content
       button.popup__close(data-close type="button")
-        img(src="@img/icons/close.svg" alt="cross")
+        img(data-src="@img/icons/close.svg" alt="cross")
       .thanks__wrapper
         .thanks__title Спасибо
         .thanks__desc Руководитель внимательно ознакомиться с Вашим письмом, и ответит Вам в ближайшее время
         .thanks__check
-          img(src="@img/icons/tick-double.svg" alt="icon check")
+          img(data-src="@img/icons/tick-double.svg" alt="icon check")
         

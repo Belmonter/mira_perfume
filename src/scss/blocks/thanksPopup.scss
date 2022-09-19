@@ -1,21 +1,29 @@
 .thanks {
   &__content {
     width: rem(1080);
-    padding: rem(88) rem(275) rem(134) rem(275);
+    @include adaptiveValue("width", 1080, 330);
+    padding-bottom: rem(275);
+    @include adaptiveValue("padding-top", 88, 46);
+    @include adaptiveValue("padding-left", 275, 12);
+    @include adaptiveValue("padding-right", 275, 12);
     background-image: url("@img/icons/popup_background.svg");
     background-position: left bottom;
     background-repeat: no-repeat;
+    background-size: rem(468) rem(429);
+    @media (max-width: 768px) {
+      background-size: rem(210) rem(192);
+    }
   }
   &__title {
     font-weight: 700;
-    font-size: rem(64);
-    line-height: math.div(74 , 64);
+    @include adaptiveValue("font-size", 64, 46);
+    line-height: math.div(74, 64);
     text-align: center;
   }
   &__desc {
     margin-top: rem(24);
-    font-size: rem(24);
-    line-height: math.div(34 , 24);
+    @include adaptiveValue("font-size", 24, 16);
+    line-height: math.div(34, 24);
     text-align: center;
   }
   &__check {
