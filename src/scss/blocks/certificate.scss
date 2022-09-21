@@ -20,9 +20,15 @@
     }
   }
   &__item {
+    cursor: pointer;
     @include adaptiveValue("width", 284, 128);
     @include adaptiveValue("height", 400, 180);
     filter: drop-shadow(0px 4px 14px rgba(0, 0, 0, 0.14));
+    transition: all 0.5s ease 0s;
+    &:hover{
+      transform: scale(1.6);
+      z-index: 5;
+    }
   }
   .certificate-zoom-container {
     width: 407px;

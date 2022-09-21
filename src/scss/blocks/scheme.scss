@@ -181,6 +181,7 @@
     position: absolute;
     top: 134px;
     right: 235px;
+    z-index: 2;
     @media (max-width: 900px) {
       top: rem(12);
     }

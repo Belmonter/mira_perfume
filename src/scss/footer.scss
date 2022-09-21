@@ -6,7 +6,6 @@
   &__wrapper {
     position: relative;
     display: flex;
-    justify-content: center;
     column-gap: rem(50);
     @media (max-width: 768px) {
       flex-direction: column-reverse;
@@ -18,8 +17,9 @@
     position: absolute;
     bottom: -69px;
     right: -200px;
+    @include adaptiveValue("right", -200, 6, 1800, 1250, 1);
     z-index: -1;
-    @media (max-width: 1472px){
+    @media (max-width: 1250px){
       display: none;
     }
   }
