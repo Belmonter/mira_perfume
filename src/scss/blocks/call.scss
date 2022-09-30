@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     column-gap: rem(46);
-    @media (max-width: 750px){
+    @media (max-width: rem(750)){
       flex-direction: column-reverse;
       row-gap: rem(12);
     }
@@ -16,19 +16,19 @@
     font-weight: 600;
     @include adaptiveValue("font-size", 18, 16);
     line-height: math.div(24, 18);
-    @media (max-width: 750px){
+    @media (max-width: rem(750)){
       text-align: center;
     }
   }
   &__btn {
     margin-top: rem(24);
-    @media (max-width: 750px){
+    @media (max-width: rem(750)){
       display: flex;
       margin: rem(24) auto 0px auto;
     }
   }
   &__img {
-    width: 330px;
-    height: 336px;
+    width: rem(330);
+    height: rem(336);
   }
 }

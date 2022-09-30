@@ -14,7 +14,7 @@ textarea {
   height: rem(42);
 	display: block;
 	padding: rem(10);
-	border: 1px solid $mainColor;
+	border: rem(1) solid $mainColor;
   background-color: inherit;
   backdrop-filter: blur(7px);
 	&._form-focus {

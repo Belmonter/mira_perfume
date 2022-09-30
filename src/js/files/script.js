@@ -1,7 +1,7 @@
 // Подключение функционала "Чертогов Фрилансера"
-import { isMobile } from './functions.js';
+import {isMobile} from './functions.js';
 // Подключение списка активных модулей
-import { flsModules } from './modules.js';
+import {flsModules} from './modules.js';
 
 // flsModules.popup.open('#popup_thanks');
 
@@ -23,7 +23,6 @@ let priceError = document.querySelector('.form-get-price__error');
 let supervisorError = document.querySelector('.footer-supervisor__error');
 
 
-
 priceCheckbox.addEventListener('input', () => checkForm(priceEmail, priceName, priceTel, priceCheckbox, priceBtn));
 priceEmail.addEventListener('input', () => checkForm(priceEmail, priceName, priceTel, priceCheckbox, priceBtn));
 priceName.addEventListener('input', () => checkForm(priceEmail, priceName, priceTel, priceCheckbox, priceBtn));
@@ -35,30 +34,30 @@ supervisorTel.addEventListener('input', () => checkForm(supervisorEmail, supervi
 supervisorCheckbox.addEventListener('input', () => checkForm(supervisorEmail, supervisorName, supervisorTel, supervisorCheckbox, supervisorBtn));
 
 function checkForm(email, name, tel, checkbox, btn) {
-	if (name.value && tel.value && email.value && tel.value.length >= 17 && checkbox.checked) {
-		btn.classList.remove('disable_btn');
-	} else {
-		btn.classList.add('disable_btn');
-	}
+  if (name.value && tel.value && email.value && tel.value.length >= 17 && checkbox.checked) {
+    btn.classList.remove('disable_btn');
+  } else {
+    btn.classList.add('disable_btn');
+  }
 }
 
-priceForm.addEventListener('submit', e => sendEmail(e, priceError, 'send_price.php', priceForm));
-supervisorForm.addEventListener('submit', e => sendEmail(e, supervisorError, 'send_supervisor.php', supervisorForm));
+priceForm.addEventListener('submit', e => sendEmail(e, priceError, 'send_price.php', priceForm, 'popup_thanks-price'));
+supervisorForm.addEventListener('submit', e => sendEmail(e, supervisorError, 'send_supervisor.php', supervisorForm, 'popup_thanks-supervisor'));
 
-async function sendEmail(e, error, fileName, form) {
-	e.preventDefault();
+async function sendEmail(e, error, fileName, form, popup) {
+  e.preventDefault();
 
-	let formData = new FormData(form);
-	let response = await fetch(`../componetns/sendmail/${fileName}`, {
-		method: 'POST',
-		body: formData,
-	});
+  let formData = new FormData(form);
+  let response = await fetch(`../componetns/sendmail/${fileName}`, {
+    method: 'POST',
+    body: formData,
+  });
 
-	if (response.ok) {
-		flsModules.popup.open('#popup_thanks');
-		error.classList.remove('error-show');
-		form.reset();
-	} else {
-		error.classList.add('error-show');
-	}
+  if (response.ok) {
+    flsModules.popup.open(`#${popup}`);
+    error.classList.remove('error-show');
+    form.reset();
+  } else {
+    error.classList.add('error-show');
+  }
 }

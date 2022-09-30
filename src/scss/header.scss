@@ -2,7 +2,7 @@
 
 .header {
   &__wrapper {
-    padding: 20px 0;
+    padding: rem(20) 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -33,7 +33,7 @@
     display: flex;
     align-items: center;
     column-gap: rem(16);
-    @media (max-width: 612px) {
+    @media (max-width: rem(612)) {
       margin: rem(150) auto 0px auto;
       justify-content: center;
     }
@@ -68,11 +68,14 @@
   transform: translateX(-50%) translateY(-50%);
   background-size: cover;
   overflow: hidden;
-  @media (max-width: 1356px) {
-    transform: translateX(-64%) translateY(-50%);
+  @media (max-width: rem(1440)) {
+    transform: translateX(-63%) translateY(-50%);
   }
-  @media (max-width: 842px){
-    transform: translateX(-72%) translateY(-50%);
+  @media (max-width: rem(1024)) {
+    transform: translateX(-73%) translateY(-42%);
+  }
+  @media (max-width: rem(900)) {
+    display: none;
   }
 }
 

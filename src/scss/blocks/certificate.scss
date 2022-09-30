@@ -13,10 +13,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    @include adaptiveValue("column-gap", 45, 30, 1920, 1300, 1);
-    @media (max-width: 1280px){
+    column-gap: rem(30);
+    @media (max-width: rem(1280)){
       flex-wrap: wrap;
-      row-gap: 24px;
+      row-gap: rem(24);
     }
   }
   &__item {
@@ -31,15 +31,16 @@
     }
   }
   .certificate-zoom-container {
-    width: 407px;
     @include adaptiveValue("width", 407, 128);
     @include adaptiveValue("height", 564, 180);
-    height: 564px;
   }
   .certificate__sakura {
     position: absolute;
-    bottom: 64px;
-    right: -94px;
+    bottom: rem(64);
+    right: rem(-94);
     transform: translate(0, 100%);
+    @media (max-width: rem(900)) {
+      display: none;
+    }
   }
 }

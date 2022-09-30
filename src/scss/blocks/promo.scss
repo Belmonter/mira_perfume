@@ -2,14 +2,23 @@
   position: relative;
   height: 100vh;
   width: 100vw;
-  padding-bottom: rem(242);
   background: linear-gradient(178.38deg, rgba(0, 0, 0, 0.8) -1.94%, rgba(0, 0, 0, 0) 98.62%),
     linear-gradient(105.61deg, rgba(0, 0, 0, 0.8) -1.9%, rgba(0, 0, 0, 0) 102.87%);
   overflow: hidden;
-  @include adaptiveValue("padding-bottom", 242, 40);
+  @include adaptiveValue("padding-bottom", 321, 40);
+  @media (max-width: rem(900)) {
+    background-image: url("@img/promo_background.jpg");
+    background-position: center right;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  @media (max-width: rem(470)) {
+    background-position-x: -504px;
+    @include adaptiveValue("background-position", -504, -563, 470, 375, 1);
+  }
   &__wrapper {
     margin-top: rem(106);
-    @include adaptiveValue("margin-left", 110, 0, 1024, 700, 1);
+    @include adaptiveValue("margin-left", 146, 0, 1024, 700, 1);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -22,7 +31,7 @@
     @include adaptiveValue("font-size", 64, 38);
     line-height: math.div(74, 64);
     color: $whiteColor;
-    @media (max-width: 700px) {
+    @media (max-width: rem(700)) {
       max-width: unset;
       text-align: center;
     }
@@ -33,13 +42,13 @@
     @include adaptiveValue("font-size", 24, 16);
     line-height: math.div(34, 24);
     color: $whiteColor;
-    @media (max-width: 700px) {
+    @media (max-width: rem(700)) {
       text-align: center;
     }
   }
   &__btn {
     margin-top: rem(24);
-    @media (max-width: 700px) {
+    @media (max-width: rem(700)) {
       display: flex;
       margin: rem(24) auto 0px auto;
     }

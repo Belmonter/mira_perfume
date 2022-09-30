@@ -15,8 +15,7 @@
     justify-content: center;
   }
   &__img {
-    width: 351px;
-    height: 200px;
+    width: rem(351);
     transition: all 0.5s ease 0s;
     img {
       width: 100%;
@@ -44,8 +43,8 @@
     column-gap: rem(8);
     .swiper-pagination-bullet {
       cursor: pointer;
-      width: 8px;
-      height: 8px;
+      width: rem(8);
+      height: rem(8);
       border-radius: 50%;
       background-color: $themeColor;
       opacity: 0.2;
@@ -58,6 +57,8 @@
 }
 
 .zoom-container {
-  height: 412px;
-  @include adaptiveValue("width", 640, 310);
+  height: 88%;
+  @media (max-width: 760px) {
+    display: none;
+  }
 }

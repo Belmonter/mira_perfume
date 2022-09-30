@@ -20,17 +20,20 @@ document.addEventListener('click', function (e) {
 	}
 
 	setZoomImage('[data-zoom]', target, zoomContainer);
-	setZoomImage('[reviews-zoom]', target, reviewsZoom);
 });
 
 function setZoomImage(attr, target, zoomContainer) {
 	document.querySelectorAll(attr).forEach(el => {
 		if (target === el && zoomContainer) {
-			let image = el.cloneNode(true);
-			image.removeAttribute(attr);
-			zoomContainer.appendChild(image);
-			zoomContainer.classList.remove('hide-zoom');
-			zoomContainer.classList.add('show-zoom');
+      if (zoomContainer.children.length) {
+				hideZoomImage(zoomContainer);
+			} else {
+				let image = el.cloneNode(true);
+				image.removeAttribute(attr.replace('[', '').replace(']', ''));
+				zoomContainer.appendChild(image);
+				zoomContainer.classList.remove('hide-zoom');
+				zoomContainer.classList.add('show-zoom');
+			}
 		}
 	});
 }

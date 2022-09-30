@@ -31,8 +31,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%) scale(0);
-  width: 640px;
-  height: 412px;
+  width: rem(640);
+  height: rem(412);
   transition: all 0.5s ease 0s;
   img {
     position: absolute;

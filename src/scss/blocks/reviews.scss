@@ -1,16 +1,20 @@
 .reviews {
+  &__container {
+    max-width: 1734px;
+  }
   position: relative;
   background: linear-gradient(99.3deg, #6960e1 -1.83%, #cc72c8 102.82%);
   padding: rem(60) 0;
-  @media (max-width: 590px) {
+  @media (max-width: rem(590)) {
     background: #fff;
     padding: 0px 0px;
   }
   &__head {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    @media (max-width: 590px) {
+    justify-content: center;
+    @media (max-width: rem(590)) {
       justify-content: center;
     }
   }
@@ -20,14 +24,24 @@
     line-height: math.div(34, 24);
     text-transform: uppercase;
     color: $whiteColor;
-    @media (max-width: 590px) {
+    @media (max-width: rem(590)) {
       color: $mainColor;
     }
   }
   &__slide-navigation {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
     display: flex;
     align-items: center;
     column-gap: rem(24);
+    @media (max-width: rem(900)) {
+      position: static;
+    }
+  }
+  &__slider {
+    overflow: visible !important;
   }
   &__slide {
     display: flex;
@@ -50,16 +64,20 @@
   }
   .reviews-slider-wrapper {
     position: relative;
-    width: 196px;
-    height: 400px;
+    width: rem(193);
+    height: rem(400);
+    transition: all 0.3s ease 0s;
+    &:hover{
+      transform: scale(1.7) translate(0, -16%);
+    }
   }
   .review-slider-container {
-    margin: 40px auto 0px auto;
+    margin: rem(40) auto 0px auto;
   }
   .reviews__slide-left,
   .reviews__slide-right {
     cursor: pointer;
-    @media (max-width: 590px) {
+    @media (max-width: rem(590)) {
       justify-content: center;
     }
   }
@@ -69,8 +87,8 @@
     column-gap: rem(8);
     .swiper-pagination-bullet {
       cursor: pointer;
-      width: 8px;
-      height: 8px;
+      width: rem(8);
+      height: rem(8);
       border-radius: 50%;
       background-color: $blueColor;
       opacity: 0.2;
@@ -83,16 +101,16 @@
 }
 
 .reviews-zoom-container {
-  width: 317px;
-  height: 574px;
-  @media (max-width: 590px){
-    width: 293px;
-    height: 546px;
+  width: rem(317);
+  height: rem(574);
+  @media (max-width: rem(590)) {
+    width: rem(293);
+    height: rem(546);
   }
 }
 
 .reviews__slide-navigation {
-  @media (max-width: 590px) {
+  @media (max-width: rem(900)) {
     margin: rem(24) auto 0px auto;
     justify-content: center;
   }

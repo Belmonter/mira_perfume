@@ -8,7 +8,7 @@
     background-image: url("@img/icons/popup_background.svg");
     background-position: left center;
     background-repeat: no-repeat;
-    @media (max-width: 768px) {
+    @media (max-width: rem(768)) {
       background-position: left top;
       background-size: rem(210) rem(193);
     }
@@ -28,13 +28,13 @@
 .form-supervisor {
   margin-top: rem(24);
   &__input {
-    flex: 0 1 310px;
+    flex: 0 1 rem(310);
     &._form-error {
       input {
-        border: 1px solid red;
+        border: rem(1) solid red;
       }
     }
-    @media (max-width: 768px) {
+    @media (max-width: rem(768)) {
       flex: unset;
       width: 100%;
     }
@@ -43,7 +43,7 @@
     display: flex;
     align-items: center;
     column-gap: rem(16);
-    @media (max-width: 768px) {
+    @media (max-width: rem(768)) {
       flex-direction: column;
       row-gap: rem(24);
     }
@@ -54,7 +54,7 @@
   &__txta {
     display: flex;
     textarea {
-      flex: 0 1 962px;
+      flex: 0 1 rem(962);
       height: rem(86);
     }
   }
@@ -69,7 +69,7 @@
     background: #6960e1;
     box-shadow: 0px 4px 14px rgba(138, 61, 135, 0.4);
     color: $whiteColor;
-    @media (max-width: 768px) {
+    @media (max-width: rem(768)) {
       width: 100%;
     }
   }

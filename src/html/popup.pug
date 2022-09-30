@@ -32,12 +32,12 @@
         .supervisor__title Написать Руководителю
         .supervisor__desc Обратитесь к руководителю и он ответит на Ваши вопросы и предложения
         form.supervisor__form.form-supervisor(id="superviser_form")
-          .form-supervisor__head 
-            .form-supervisor__input 
+          .form-supervisor__head
+            .form-supervisor__input
               input.input(autocomplete="off" id="supervisor_email" data-validate data-required="email" type="text" name="supervisor_email" placeholder="e-mail")
-            .form-supervisor__input 
+            .form-supervisor__input
               input.input(autocomplete="off" id="supervisor_name" data-validate type="text" name="supervisor_name" placeholder="Ваше Имя")
-            .form-supervisor__input 
+            .form-supervisor__input
               input.input(autocomplete="off" id="supervisor_tel" data-validate type="tel" data-tel-input maxlength="18" name="supervisor_tel" placeholder="+ 7 ( _ _ _ ) _ _ _  _ _ _ ")
           .form-supervisor__footer.footer-supervisor
             .footer-supervisor__txta
@@ -47,11 +47,11 @@
               label.checkbox__label(for="c_2")
                 span.checkbox__text Согласие с политикой обработки персональных данных
             button.footer-supervisor__btn.disable_btn(type="submit") Написать
-            .footer-supervisor__error 
+            .footer-supervisor__error
               p Ошибка отправки,
               p попробуйте повторить попытку
 
-.popup(id="popup_thanks" aria-hidden="true")
+.popup(id="popup_thanks-supervisor" aria-hidden="true")
   .popup__wrapper.thanks__wrapper
     .popup__content.thanks__content
       button.popup__close(data-close type="button")
@@ -61,4 +61,14 @@
         .thanks__desc Руководитель внимательно ознакомиться с Вашим письмом, и ответит Вам в ближайшее время
         .thanks__check
           img(data-src="@img/icons/tick-double.svg" alt="icon check")
-        
+
+.popup(id="popup_thanks-price" aria-hidden="true")
+  .popup__wrapper.thanks__wrapper
+    .popup__content.thanks__content
+      button.popup__close(data-close type="button")
+        img(data-src="@img/icons/close.svg" alt="cross")
+      .thanks__wrapper
+        .thanks__title Спасибо
+        .thanks__desc Ваши данные успешно отправлены, наш менеджер уже готовит для Вас предложение
+        .thanks__check
+          img(data-src="@img/icons/tick-double.svg" alt="icon check")

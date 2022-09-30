@@ -6,8 +6,8 @@
     display: grid;
     justify-content: center;
     column-gap: rem(58);
-    @include adaptiveValue("row-gap", 60, 24);
-    grid-template-columns: repeat(auto-fill, minmax(rem(150), rem(492)));
+    @include adaptiveValue("row-gap", 80, 24);
+    grid-template-columns: repeat(auto-fill, minmax(rem(150), rem(528)));
   }
   &__item {
     display: flex;
@@ -23,14 +23,13 @@
     }
     &__title {
       font-weight: 600;
-      @include adaptiveValue("font-size", 18, 16);
+      font-size: rem(18);
       line-height: math.div(24, 18);
     }
     &__desc {
       max-width: rem(420);
       margin-top: rem(12);
       line-height: math.div(22, 16);
-      @include adaptiveValue("font-size", 16, 14);
     }
   }
 }

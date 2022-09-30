@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     @include adaptiveValue("row-gap", 60, 24);
-    @media (max-width: 900px){
+    @media (max-width: rem(900)) {
       margin-top: rem(68);
     }
   }
@@ -15,11 +15,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    column-gap: 76px;
-    @media (max-width: 900px) {
+    column-gap: rem(76);
+    @media (max-width: rem(900)) {
       flex-direction: column;
       align-items: center;
-      row-gap: 12px;
+      row-gap: rem(12);
     }
     &:nth-child(1) {
       @media (max-width: 900px) {
@@ -28,12 +28,12 @@
       }
     }
     &:nth-child(2) {
-      @media (max-width: 900px) {
+      @media (max-width: rem(900)) {
         flex-direction: column-reverse;
       }
     }
     &:nth-child(4) {
-      @media (max-width: 900px) {
+      @media (max-width: rem(900)) {
         flex-direction: column-reverse;
       }
     }
@@ -42,14 +42,18 @@
 .item-scheme {
   .scheme-img_1 {
     position: relative;
-    @include adaptiveValue("width", 430, 264);
-    @include adaptiveValue("height", 280, 167);
+    width: rem(340);
+    height: rem(200);
+    @media (max-width: rem(1300)) {
+      @include adaptiveValue("width", 340, 284);
+      @include adaptiveValue("height", 200, 167);
+    }
     z-index: 2;
     &::after {
       content: "01";
       position: absolute;
-      top: -50px;
-      left: 30px;
+      top: -38%;
+      left: -3%;
       font-weight: 800;
       font-size: rem(118);
       line-height: math.div(136, 118);
@@ -59,22 +63,22 @@
       background-clip: text;
       text-fill-color: transparent;
       z-index: -1;
-      @media (max-width: 900px) {
-        top: -67px;
-        left: -34px;
+      @media (max-width: rem(900)) {
+        top: -45%;
+        left: -3%;
       }
     }
   }
   .scheme-img_2 {
     position: relative;
-    @include adaptiveValue("width", 432, 289);
+    @include adaptiveValue("width", 432, 341);
     @include adaptiveValue("height", 280, 226);
     z-index: 2;
     &::after {
       content: "02";
       position: absolute;
-      top: 20px;
-      @include adaptiveValue("left", 108, 59, 1320, 900, 1);
+      top: 7%;
+      left: 24%;
       font-weight: 800;
       font-size: rem(118);
       line-height: math.div(136, 118);
@@ -83,22 +87,25 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       z-index: -1;
-      @media (max-width: 900px) {
-        top: -2px;
-        left: 22px;
+      @media (max-width: rem(900)) {
+        top: 5px;
+        @include adaptiveValue("left", 89, 71, 900, 768, 1);
+      }
+      @media (max-width: 768px) {
+        @include adaptiveValue("left", 71, 50, 768, 425, 1);
       }
     }
   }
   .scheme-img_3 {
     position: relative;
-    @include adaptiveValue("width", 420, 351);
-    @include adaptiveValue("height", 280, 234);
+    @include adaptiveValue("width", 560, 351);
+    @include adaptiveValue("height", 373, 234);
     z-index: 2;
     &::after {
       content: "03";
       position: absolute;
-      top: 30px;
-      @include adaptiveValue("right", 30, 11, 1320, 900, 1);
+      @include adaptiveValue("top", 62, 40, 1440, 1024, 1);
+      @include adaptiveValue("right", 79, 56, 1440, 1024, 1);
       font-weight: 800;
       font-size: rem(118);
       line-height: math.div(136, 118);
@@ -107,22 +114,26 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       z-index: -1;
-      @media (max-width: 900px) {
-        right: 11px;
-        top: 13px;
+      @media (max-width: rem(900)) {
+        @include adaptiveValue("top", 38, 31, 900, 768, 1);
+        @include adaptiveValue("right", 39, 28, 900, 768, 1);
+      }
+      @media (max-width: rem(768)) {
+        @include adaptiveValue("top", 31, 1, 768, 375, 1);
+        @include adaptiveValue("right", 28, 1, 768, 375, 1);
       }
     }
   }
   .scheme-img_4 {
     position: relative;
-    @include adaptiveValue("width", 420, 309);
-    @include adaptiveValue("height", 280, 173);
+    @include adaptiveValue("width", 370, 309);
+    @include adaptiveValue("height", 208, 173);
     z-index: 2;
     &::after {
       content: "04";
       position: absolute;
-      top: 3px;
-      @include adaptiveValue("left", 25, -21, 1320, 900, 1);
+      top: rem(3);
+      left: rem(-25);
       font-weight: 800;
       font-size: rem(118);
       line-height: math.div(136, 118);
@@ -131,12 +142,15 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       z-index: -1;
-      @media (max-width: 900px){
-        top: -41px;
+      @media (max-width: rem(1300)) {
+        @include adaptiveValue("left", -25, -21, 1300, 900, 1);
+      }
+      @media (max-width: rem(900)) {
+        top: rem(-41);
       }
     }
-    @media (max-width: 900px){
-      margin-top: 41px;
+    @media (max-width: rem(900)) {
+      margin-top: rem(41);
     }
   }
   .desc-scheme {
@@ -145,7 +159,7 @@
       @include adaptiveValue("font-size", 18, 16);
       line-height: math.div(24, 18);
       z-index: 2;
-      @media (max-width: 900px) {
+      @media (max-width: rem(900)) {
         text-align: center;
       }
     }
@@ -157,7 +171,7 @@
       p {
         z-index: 2;
       }
-      @media (max-width: 900px) {
+      @media (max-width: rem(900)) {
         text-align: center;
       }
     }
@@ -169,7 +183,7 @@
       color: $themeColor;
       border-bottom: rem(1) solid $themeColor;
       z-index: 2;
-      @media (max-width: 900px) {
+      @media (max-width: rem(900)) {
         width: rem(128);
         display: flex;
         margin: rem(16) auto 0px auto;
@@ -179,11 +193,11 @@
   }
   &__sakura {
     position: absolute;
-    top: 134px;
-    right: 235px;
+    top: rem(134);
+    right: rem(235);
     z-index: 2;
-    @media (max-width: 900px) {
-      top: rem(12);
+    @media (max-width: rem(900)) {
+      display: none;
     }
   }
 }

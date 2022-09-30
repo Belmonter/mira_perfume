@@ -1,13 +1,13 @@
 .footer {
   padding-top: rem(60);
-  @media (max-width: 768px){
+  @media (max-width: rem(768)) {
     padding-top: rem(80);
   }
   &__wrapper {
     position: relative;
     display: flex;
     column-gap: rem(50);
-    @media (max-width: 768px) {
+    @media (max-width: rem(768)) {
       flex-direction: column-reverse;
       row-gap: rem(40);
       align-items: center;
@@ -15,18 +15,20 @@
   }
   &__sakura {
     position: absolute;
-    bottom: -69px;
-    right: -200px;
-    @include adaptiveValue("right", -200, 6, 1800, 1250, 1);
+    bottom: rem(-69);
+    @include adaptiveValue("right", -252, -2, 1920, 1440, 1);
     z-index: -1;
-    @media (max-width: 1250px){
+    @media (max-width: rem(1300)) {
+      @include adaptiveValue("right", -2, 6, 1800, 1400, 1);
+    }
+    @media (max-width: rem(1250)) {
       display: none;
     }
   }
   &__map {
-    width: rem(640);
-    height: rem(400);
-    @media (max-width: 768px){
+    @include adaptiveValue("width", 853, 640, 1920, 1300, 1);
+    @include adaptiveValue("height", 533, 400, 1920, 1300, 1);
+    @media (max-width: rem(768)) {
       width: rem(375);
       height: rem(234);
     }
@@ -35,33 +37,29 @@
     margin-top: rem(40);
     padding: rem(7) 0;
     background: #f5f5f5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: math.div(22, 16);
   }
   .info-footer {
     &__title {
       font-weight: 600;
-      @include adaptiveValue("font-size", 18, 16);
+      @include adaptiveValue("font-size", 24, 16);
       line-height: math.div(24, 18);
-      @media (max-width: 768px) {
+      @media (max-width: rem(768)) {
         text-align: center;
       }
     }
     &__city {
       margin-top: rem(12);
       line-height: math.div(22, 16);
-      @include adaptiveValue("font-size", 16, 14);
-      @media (max-width: 768px) {
+      @include adaptiveValue("font-size", 21, 14);
+      @media (max-width: rem(768)) {
         text-align: center;
       }
     }
     &__address {
       margin-top: rem(12);
       line-height: math.div(22, 16);
-      @include adaptiveValue("font-size", 16, 14);
-      @media (max-width: 768px) {
+      @include adaptiveValue("font-size", 21, 14);
+      @media (max-width: rem(768)) {
         text-align: center;
       }
     }
@@ -73,13 +71,18 @@
       display: flex;
       align-items: center;
       column-gap: rem(16);
-      @media (max-width: 768px) {
+      img {
+        cursor: pointer;
+        @include adaptiveValue("width", 45, 34, 1920, 1300, 1);
+        @include adaptiveValue("height", 45, 34, 1920, 1300, 1);
+      }
+      @media (max-width: rem(768)) {
         justify-content: center;
       }
     }
     &__btn {
       margin-top: rem(40);
-      @media (max-width: 768px) {
+      @media (max-width: rem(768)) {
         display: flex;
         margin: rem(24) auto 0px auto;
       }
@@ -88,9 +91,9 @@
   .contacts-footer {
     &__title {
       font-weight: 600;
-      @include adaptiveValue("font-size", 18, 16);
+      @include adaptiveValue("font-size", 24, 16);
       line-height: math.div(24, 18);
-      @media (max-width: 768px) {
+      @media (max-width: rem(768)) {
         text-align: center;
       }
     }
@@ -98,8 +101,8 @@
       display: block;
       margin-top: rem(12);
       line-height: math.div(22, 16);
-      @include adaptiveValue("font-size", 16, 14);
-      @media (max-width: 768px) {
+      @include adaptiveValue("font-size", 21, 14);
+      @media (max-width: rem(768)) {
         text-align: center;
       }
     }
@@ -107,10 +110,20 @@
       display: block;
       margin-top: rem(12);
       line-height: math.div(22, 16);
-      @include adaptiveValue("font-size", 16, 14);
-      @media (max-width: 768px) {
+      @include adaptiveValue("font-size", 21, 14);
+      @media (max-width: rem(768)) {
         text-align: center;
       }
     }
+  }
+}
+.policy__container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: rem(10);
+  line-height: math.div(22, 16);
+  @media (max-width: rem(600)){
+    justify-content: center;
   }
 }
